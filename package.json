@@ -1,0 +1,20 @@
+{
+  "name": "skill-run-audit",
+  "version": "0.1.0",
+  "description": "Audit agent skill runs for plan, validation, and side-effect boundary evidence.",
+  "type": "module",
+  "bin": {
+    "skill-run-audit": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/*.js test/*.js",
+    "build": "node scripts/build-check.js",
+    "smoke": "node src/cli.js fixtures/sample.jsonl --format markdown"
+  },
+  "keywords": ["agent", "skill", "audit", "dry-run", "cli"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
