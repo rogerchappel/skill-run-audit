@@ -10,11 +10,33 @@
     "test": "node --test",
     "check": "node --check src/*.js test/*.js",
     "build": "node scripts/build-check.js",
-    "smoke": "node src/cli.js fixtures/sample.jsonl --format markdown"
+    "smoke": "node src/cli.js fixtures/sample.jsonl --format markdown",
+    "lint": "npm run check",
+    "package:smoke": "npm pack --dry-run",
+    "release:check": "npm run check && npm run test && npm run smoke && npm run package:smoke"
   },
-  "keywords": ["agent", "skill", "audit", "dry-run", "cli"],
+  "keywords": [
+    "agent",
+    "skill",
+    "audit",
+    "dry-run",
+    "cli"
+  ],
   "license": "MIT",
   "engines": {
     "node": ">=20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerchappel/skill-run-audit.git"
+  },
+  "files": [
+    "src",
+    "docs",
+    "fixtures",
+    "scripts",
+    "SKILL.md",
+    "README.md",
+    "LICENSE"
+  ]
 }
