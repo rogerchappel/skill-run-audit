@@ -12,7 +12,7 @@
     "build": "node scripts/build-check.js",
     "smoke": "node src/cli.js fixtures/sample.jsonl --format markdown",
     "lint": "npm run check",
-    "package:smoke": "npm pack --dry-run",
+    "package:smoke": "node scripts/package-smoke.mjs",
     "release:check": "npm run check && npm run test && npm run smoke && npm run package:smoke"
   },
   "keywords": [
@@ -30,6 +30,10 @@
     "type": "git",
     "url": "git+https://github.com/rogerchappel/skill-run-audit.git"
   },
+  "bugs": {
+    "url": "https://github.com/rogerchappel/skill-run-audit/issues"
+  },
+  "homepage": "https://github.com/rogerchappel/skill-run-audit#readme",
   "files": [
     "src",
     "docs",
